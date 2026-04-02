@@ -1,0 +1,8 @@
+.claude/
+.env
+node_modules/
+.DS_Store
+.devcontainer/
+CLAUDE.md
+presentation.html
+src/
