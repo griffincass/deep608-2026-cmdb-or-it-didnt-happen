@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CMDB or It Didn't Happen — Deep 608</title>
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
 <style>
@@ -17,8 +18,8 @@
     --c-surface:     #0f0e0c;
     --c-surface-2:   #181610;
     --c-fg:          #f0ebe0;
-    --c-fg-mid:      #a09888;
-    --c-fg-dim:      #5c554a;
+    --c-fg-mid:      #c0b8a8;
+    --c-fg-dim:      #8a8070;
     --c-amber:       #d4a03c;
     --c-amber-light: #f0c85c;
     --c-amber-deep:  #9a6e1c;
@@ -122,7 +123,7 @@
     pointer-events: none;
     z-index: 99;
     background:
-      radial-gradient(ellipse 70% 55% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);
+      radial-gradient(ellipse 70% 55% at 50% 50%, transparent 40%, rgba(0,0,0,0.35) 100%);
   }
 
   /* Cinematic letterbox bars */
@@ -142,7 +143,7 @@
     position: fixed; inset: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.4;
   }
 
   /* ==========================================================================
@@ -1667,8 +1668,8 @@
          <text class="tl-label" x="800" y="50" text-anchor="middle" fill="#f0ebe0" font-family="Source Sans 3" font-size="11" font-weight="700" style="transition-delay:1.3s">2020</text>
          <text class="tl-label" x="800" y="88" text-anchor="middle" fill="#a09888" font-family="Source Sans 3" font-size="9" style="transition-delay:1.3s">Remote Everything</text></g>
       <g><circle class="tl-dot" cx="940" cy="65" r="7" fill="#d4a03c" style="transition-delay:1.5s"/>
-         <text class="tl-label" x="940" y="50" text-anchor="middle" fill="#f0ebe0" font-family="Source Sans 3" font-size="11" font-weight="700" style="transition-delay:1.5s">2024</text>
-         <text class="tl-label" x="940" y="88" text-anchor="middle" fill="#a09888" font-family="Source Sans 3" font-size="9" style="transition-delay:1.5s">AI Everywhere</text></g>
+         <text class="tl-label" x="940" y="50" text-anchor="middle" fill="#f0ebe0" font-family="Source Sans 3" font-size="11" font-weight="700" style="transition-delay:1.5s">2025+</text>
+         <text class="tl-label" x="940" y="88" text-anchor="middle" fill="#c0b8a8" font-family="Source Sans 3" font-size="9" style="transition-delay:1.5s">AI Everywhere</text></g>
 
       <!-- Gap -->
       <rect x="190" y="105" width="810" height="44" rx="8" fill="none" stroke="rgba(212,160,60,0.12)" stroke-dasharray="6,4"/>
@@ -1699,7 +1700,7 @@
          <text class="tl-label" x="840" y="175" text-anchor="middle" fill="#a09888" font-family="Source Sans 3" font-size="10" font-weight="700" style="transition-delay:2.9s">2021</text>
          <text class="tl-label" x="840" y="212" text-anchor="middle" fill="#5c554a" font-family="Source Sans 3" font-size="9" style="transition-delay:2.9s">CIS v8</text></g>
       <g><circle class="tl-dot" cx="940" cy="190" r="5" fill="#5c554a" style="transition-delay:3.1s"/>
-         <text class="tl-label" x="940" y="175" text-anchor="middle" fill="#a09888" font-family="Source Sans 3" font-size="10" font-weight="700" style="transition-delay:3.1s">2024</text>
+         <text class="tl-label" x="940" y="175" text-anchor="middle" fill="#c0b8a8" font-family="Source Sans 3" font-size="10" font-weight="700" style="transition-delay:3.1s">2024</text>
          <text class="tl-label" x="940" y="212" text-anchor="middle" fill="#5c554a" font-family="Source Sans 3" font-size="9" style="transition-delay:3.1s">NIST CSF v2</text></g>
 
       <!-- Bottom pattern -->
@@ -1850,13 +1851,15 @@
         <li>No plan for when systems fail</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>Cloud migration, AI, Zero Trust, digital everything</li>
-        <li>Massive investment in transformation</li>
-        <li>No asset inventory underneath it</li>
-        <li>No incident response plan if something breaks</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>Cloud migration, AI, Zero Trust, digital everything</li>
+          <li>Massive investment in transformation</li>
+          <li>No asset inventory underneath it</li>
+          <li>No incident response plan if something breaks</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>Grand visions without foundational controls are just expensive experiments.</p></div>
     </div>
@@ -1998,13 +2001,15 @@
         <li>Everything looks great from the approved path</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>Auditors review the controls we choose to show them</li>
-        <li>Dashboards are green but nobody checks what's behind them</li>
-        <li>Shadow IT, unreviewed access, unpatched systems</li>
-        <li>Compliance checkbox says "pass" while real risk grows</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>Auditors review the controls we choose to show them</li>
+          <li>Dashboards are green but nobody checks what's behind them</li>
+          <li>Shadow IT, unreviewed access, unpatched systems</li>
+          <li>Compliance checkbox says "pass" while real risk grows</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>A tour designed to impress auditors is not a secure environment.</p></div>
     </div>
@@ -2122,13 +2127,15 @@
         <li>Nobody knew the real count until it was too late</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>Most orgs only track the assets they know about</li>
-        <li>Shadow IT, rogue SaaS, unmanaged devices multiply quietly</li>
-        <li>The asset spreadsheet is always out of date</li>
-        <li>You can't protect what you don't know exists</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>Most orgs only track the assets they know about</li>
+          <li>Shadow IT, rogue SaaS, unmanaged devices multiply quietly</li>
+          <li>The asset spreadsheet is always out of date</li>
+          <li>You can't protect what you don't know exists</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>The dinosaurs weren't in the CMDB. Neither are half your assets.</p></div>
     </div>
@@ -2145,7 +2152,7 @@
   <h2 style="font-size:1.5em;">The Insider <span class="amber">/ Access Control</span></h2>
   <div class="quote-block" style="margin:0.1em auto 0.15em;">
     <div class="quote-text" style="font-size:0.95em;">Dodgson! We've got Dodgson here!</div>
-    <div class="quote-attr">&ensp;/&ensp;Denis Nedry</div>
+    <div class="quote-attr">&ensp;/&ensp;Dennis Nedry</div>
   </div>
   <div class="story-slide fragment sweep-up">
     <div class="story-visual">
@@ -2243,13 +2250,15 @@
         <li>One disgruntled employee shut down the entire island</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>How many admins have access they no longer need?</li>
-        <li>When was your last access review?</li>
-        <li>Could one person disable your critical systems today?</li>
-        <li>Least privilege isn't a suggestion, it's survival</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>How many admins have access they no longer need?</li>
+          <li>When was your last access review?</li>
+          <li>Could one person disable your critical systems today?</li>
+          <li>Least privilege isn't a suggestion, it's survival</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>Nedry didn't hack the system. He had the keys. That's worse.</p></div>
     </div>
@@ -2339,13 +2348,15 @@
         <li>No evacuation plan, no comms plan, no backup</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>Does your team have a documented IR playbook?</li>
-        <li>Have you ever actually rehearsed a real incident?</li>
-        <li>Who gets called first? Is that written down?</li>
-        <li>A plan you've never tested is just a document</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>Does your team have a documented IR playbook?</li>
+          <li>Have you ever actually rehearsed a real incident?</li>
+          <li>Who gets called first? Is that written down?</li>
+          <li>A plan you've never tested is just a document</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>The storm was predictable. The chaos was optional.</p></div>
     </div>
@@ -2460,13 +2471,15 @@
         <li>When the real crisis hit, the slide deck didn't help</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>Annual phishing quiz: passed. Real phish: clicked.</li>
-        <li>IR plan exists in a binder nobody has opened</li>
-        <li>Tabletop exercises? "We'll get to it next quarter"</li>
-        <li>Knowing the policy and knowing what to do are different things</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>Annual phishing quiz: passed. Real phish: clicked.</li>
+          <li>IR plan exists in a binder nobody has opened</li>
+          <li>Tabletop exercises? "We'll get to it next quarter"</li>
+          <li>Knowing the policy and knowing what to do are different things</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>If your team has never practiced a real incident, they haven't been trained.</p></div>
     </div>
@@ -2602,13 +2615,15 @@
         <li>Every failure triggered the next. The whole park collapsed.</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>A ransomware attack hits and you can't identify affected assets</li>
-        <li>Lateral movement goes undetected for weeks</li>
-        <li>The IR plan says "call IT" but IT is the one compromised</li>
-        <li>IG1 exists to prevent this exact cascade</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>A ransomware attack hits and you can't identify affected assets</li>
+          <li>Lateral movement goes undetected for weeks</li>
+          <li>The IR plan says "call IT" but IT is the one compromised</li>
+          <li>IG1 exists to prevent this exact cascade</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>Chaos isn't random. It's what happens when the foundation is missing.</p></div>
     </div>
@@ -2711,13 +2726,15 @@
         <li>The ones who ignored the fundamentals didn't make it</li>
       </ul>
 
-      <h3 class="fragment sweep-up">Sound familiar?</h3>
-      <ul class="story-bullets fragment sweep-up">
-        <li>The orgs that survive breaches know their environment</li>
-        <li>They have playbooks they've actually rehearsed</li>
-        <li>They didn't wait for the audit to start building controls</li>
-        <li>It was never about having the biggest budget</li>
-      </ul>
+      <div class="fragment sweep-up">
+        <h3>Sound familiar?</h3>
+        <ul class="story-bullets">
+          <li>The orgs that survive breaches know their environment</li>
+          <li>They have playbooks they've actually rehearsed</li>
+          <li>They didn't wait for the audit to start building controls</li>
+          <li>It was never about having the biggest budget</li>
+        </ul>
+      </div>
 
       <div class="insight-strip fragment sweep-up" style="margin-top:0.5em;max-width:100%;"><p>Survival isn't about budget. It's about basics.</p></div>
     </div>
@@ -2732,7 +2749,7 @@
 <!-- ==================== SLIDE 13: IG1 IN PLAIN LANGUAGE ==================== -->
 <section>
   <h2 style="font-size:1.35em;">IG1 Safeguards <span class="amber">in Plain Language</span></h2>
-  <p class="dim" style="font-size:0.62em;text-align:center;margin:0 0 0.2em;">What each control actually asks you to do.</p>
+  <p class="dim" style="font-size:0.62em;text-align:center;margin:0 0 0.2em;">What the park actually needed &mdash; and what each control asks you to do.</p>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;max-width:1100px;margin:0 auto;text-align:left;">
 
     <!-- CIS 1 & 2 -->
@@ -2890,7 +2907,7 @@
     <div class="hub-ring"></div>
   </div>
   <p class="fragment sweep-up" style="text-align:center;font-size:0.85em;margin-top:0.2em;">
-    Executives like plain language. <strong class="amber">CIS is plain language.</strong>
+    One framework. Every audit. <strong class="amber">No translation needed.</strong>
   </p>
   <aside class="notes">
     CIS Controls map to NIST, ISO, SOC2, PCI, HIPAA, CMMC, GLBA, GDPR, CCPA, FFIEC — all of them.
@@ -2938,6 +2955,22 @@
   </aside>
 </section>
 
+<!-- ==================== SLIDE 16: THANK YOU / Q&A ==================== -->
+<section>
+  <h2 style="font-size:2em;">Thank <span class="amber">You</span></h2>
+  <div class="divider" style="margin:0.4em auto 0.6em;"></div>
+  <p style="font-size:1em;text-align:center;margin:0.3em 0;"><strong>Griffin Cass</strong></p>
+  <p class="dim" style="font-size:0.8em;text-align:center;margin:0.1em 0;">Information Security Architect</p>
+  <p class="amber" style="font-size:0.8em;text-align:center;margin:0.1em 0 0.8em;"><strong>UW Credit Union</strong></p>
+  <div class="quote-block" style="margin:0.5em auto;">
+    <div class="quote-text" style="font-size:0.95em;">Life finds a way. So does a good security program.</div>
+  </div>
+  <p class="dim" style="font-size:0.85em;text-align:center;margin:0.8em 0 0;">Questions?</p>
+  <aside class="notes">
+    Thank the audience. Open the floor for questions. Mention cas.docs.cisecurity.org for anyone who wants to start with IG1.
+  </aside>
+</section>
+
 </div><!-- /.slides -->
 </div><!-- /.reveal -->
 
@@ -2978,7 +3011,7 @@
   const cx = cv.getContext('2d');
   let W, H;
   const pts = [];
-  const NUM = 80;
+  const NUM = 40;
 
   function resize() {
     W = cv.width  = window.innerWidth;
@@ -3087,10 +3120,6 @@
       trexPlayed = true;
       trexTimer = setTimeout(function() {
         helloSlide.classList.add('trex-active');
-        // Auto-advance after animation completes (~12.5s)
-        setTimeout(function() {
-          Reveal.next();
-        }, 12500);
       }, 2000); // 2s pause before T-Rex enters
     }
 
