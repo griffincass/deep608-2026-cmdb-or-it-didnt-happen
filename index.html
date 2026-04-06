@@ -1512,6 +1512,9 @@
     </div>
   </div>
 
+  <!-- Invisible fragment: clicking "Next" on this slide triggers the T-Rex -->
+  <div class="fragment" id="trex-trigger" style="display:none;"></div>
+
   <aside class="notes">
     Welcome everyone. Quick intro. I'm Griffin, I work in information security at UW Credit Union.
     Before we dive in, a quick show of hands: who here has a CMDB they actually trust?
@@ -3077,35 +3080,44 @@
       plugins: [typeof RevealNotes !== 'undefined' ? RevealNotes : null].filter(Boolean)
     });
 
-    // T-Rex animation on slide 1
+    // T-Rex animation on slide 1 — triggered by fragment advance (click "Next")
     var helloSlide = document.getElementById('slide-hello');
+    var trexTrigger = document.getElementById('trex-trigger');
     var trexTimer = null;
-    var trexPlayed = false;
 
     function startTrex() {
-      if (trexPlayed || !helloSlide) return;
-      trexPlayed = true;
+      if (!helloSlide) return;
       trexTimer = setTimeout(function() {
         helloSlide.classList.add('trex-active');
-        // Auto-advance after animation completes (~12.5s)
+        // Auto-advance to next slide after animation completes (~12.5s)
         setTimeout(function() {
           Reveal.next();
         }, 12500);
-      }, 2000); // 2s pause before T-Rex enters
+      }, 500); // brief pause before T-Rex enters
     }
 
     function resetTrex() {
       if (trexTimer) { clearTimeout(trexTimer); trexTimer = null; }
-      // Allow replay if they come back to slide 1
       if (helloSlide) helloSlide.classList.remove('trex-active');
-      trexPlayed = false;
     }
 
-    Reveal.on('slidechanged', function(e) {
-      // T-Rex trigger
-      if (e.currentSlide === helloSlide) {
+    // When the hidden fragment is shown (user clicks Next on name tag), start T-Rex
+    Reveal.on('fragmentshown', function(e) {
+      if (e.fragment === trexTrigger) {
         startTrex();
-      } else {
+      }
+    });
+
+    // When the fragment is hidden (user clicks Back), cancel/reset T-Rex
+    Reveal.on('fragmenthidden', function(e) {
+      if (e.fragment === trexTrigger) {
+        resetTrex();
+      }
+    });
+
+    // Reset T-Rex state when leaving slide 1
+    Reveal.on('slidechanged', function(e) {
+      if (e.currentSlide !== helloSlide) {
         resetTrex();
       }
 
@@ -3117,9 +3129,6 @@
     // Initial state
     var first = Reveal.getCurrentSlide();
     if (first) first.classList.add('active-slide');
-    if (first === helloSlide) {
-      startTrex();
-    }
 
     // ============================
     // STAT COUNTER ANIMATION
